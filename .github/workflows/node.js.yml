@@ -29,7 +29,7 @@ jobs:
     - run: npm i
     - run: npm run testAll
     - name: Archive tests results
-      if: succes() || failure()
+      if: success() || failure()
       uses: actions/upload-artifact@v3
       with:
         name: test-report
