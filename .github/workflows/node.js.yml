@@ -33,7 +33,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: test-report
-        path: mochawesome-report
+        path: |
+          mochawesome-report
+          reports
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v3
       if: success() || failure()
